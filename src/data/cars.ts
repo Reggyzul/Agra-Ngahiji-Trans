@@ -1,7 +1,5 @@
 import { Car, Testimonial } from '../types';
 
-import { Car, Testimonial } from '../types';
-
 export const CARS: Car[] = [
   {
     id: 'toyota-avanza',

@@ -13,9 +13,6 @@ interface CarListProps {
 export default function CarList({ onSelectCar, lang }: CarListProps) {
   const t = TRANSLATIONS[lang];
 
-export default function CarList({ onSelectCar, lang }: CarListProps) {
-  const t = TRANSLATIONS[lang];
-
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6285864335465';
     const message = `Halo AGRA NGAHIJI TRANS, saya berminat memesan/sewa armada unit ${carName} untuk rute Cianjur Selatan - Jabodetabek - Bandung. Mohon info ketersediaan jam & tanggal. Terima kasih!`;

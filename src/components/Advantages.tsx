@@ -21,9 +21,6 @@ interface AdvantagesProps {
 export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps) {
   const t = TRANSLATIONS[lang];
 
-export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps) {
-  const t = TRANSLATIONS[lang];
-
   const advantagesList = [
     {
       id: 'keselamatan-nomor-satu',
