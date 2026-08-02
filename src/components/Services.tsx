@@ -11,83 +11,65 @@ export default function Services({ lang }: ServicesProps) {
   const t = TRANSLATIONS[lang];
 
   const handleWhatsAppBooking = (routeTitle: string) => {
-    const waNumber = '6281264008000';
-    const message = `Halo Dhatia Travel, saya berminat memesan tiket travel / sewa mobil rute: ${routeTitle}. Mohon info jam keberangkatan & tarif. Terima kasih!`;
+    const waNumber = '6285864335465';
+    const message = `Halo AGRA NGAHIJI TRANS, saya berminat memesan tiket travel / sewa mobil rute: ${routeTitle}. Mohon info jam keberangkatan & tarif. Terima kasih!`;
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
   const routesList = [
     {
-      id: 'shuttle-bandara',
-      icon: <Plane className="w-5 h-5 text-red-600" />,
-      badge: 'SHUTTLE BANDARA',
-      title: 'Balikpapan – Bandara SAMS Sepinggan',
-      subtitle: 'Drop Off & Shuttle Bandara 24 Jam',
-      description: 'Layanan antar-jemput tepat waktu ke Bandara SAMS Sepinggan Balikpapan untuk penerbangan domestik & internasional.',
-      tag: 'Door to Door'
-    },
-    {
-      id: 'shuttle-pelabuhan',
-      icon: <Anchor className="w-5 h-5 text-red-600" />,
-      badge: 'SHUTTLE PELABUHAN',
-      title: 'Balikpapan – Pelabuhan Semayang',
-      subtitle: 'Shuttle Penyeberangan & Kapal Laut',
-      description: 'Pengantaran nyaman langsung ke dermaga Pelabuhan Semayang Balikpapan tanpa repot.',
-      tag: 'Door to Door'
-    },
-    {
-      id: 'door-to-door-kaltim',
+      id: 'rute-1',
       icon: <MapPin className="w-5 h-5 text-red-600" />,
-      badge: 'DOOR TO DOOR',
-      title: 'Balikpapan – Samarinda & Tenggarong',
-      subtitle: 'Travel Harian & Perjalanan Keluarga',
-      description: 'Rute harian pintu ke pintu (door to door) menuju area Samarinda, Tenggarong, Loa Janan, dan sekitarnya.',
+      badge: 'RUTE POPULER',
+      title: 'Agrabinta ⇆ Pelabuhanratu ⇆ Jakarta',
+      subtitle: 'Door-to-Door / Drop Off / Carter / Reguler',
+      description: 'Layanan travel antar-kota menghubungkan Agrabinta (Cianjur Selatan), Pelabuhanratu, hingga Jakarta (Jabodetabek).',
       tag: 'Door to Door'
     },
     {
-      id: 'rute-bisnis',
-      icon: <Building2 className="w-5 h-5 text-red-600" />,
-      badge: 'RUTE BISNIS',
-      title: 'Samarinda – Tenggarong & Loa Janan',
-      subtitle: 'Rute Bisnis & Industri Kukar',
-      description: 'Antar jemput instan dari Loa Janan, Samarinda menuju kawasan Tenggarong dan industri sekitarnya.',
-      tag: 'Door to Door'
-    },
-    {
-      id: 'perjalanan-harian',
+      id: 'rute-2',
       icon: <Route className="w-5 h-5 text-red-600" />,
-      badge: 'PERJALANAN HARIAN',
-      title: 'Samarinda – Kota Bangun',
-      subtitle: 'Layanan Shuttle & Travel Harian',
-      description: 'Perjalanan aman & nyaman menghubungkan Kota Samarinda dengan Kecamatan Kota Bangun Kutai Kartanegara.',
+      badge: 'JALUR PUNCAK',
+      title: 'Agrabinta ⇆ Jalur Puncak ⇆ Jakarta',
+      subtitle: 'Door-to-Door / Reguler & Carter',
+      description: 'Perjalanan aman & nyaman melalui jalur Puncak menghubungkan Cianjur Selatan ke Jakarta dan sekitarnya.',
       tag: 'Door to Door'
     },
     {
-      id: 'rute-utama',
+      id: 'rute-3',
+      icon: <Building2 className="w-5 h-5 text-red-600" />,
+      badge: 'RUTE BANDUNG',
+      title: 'Agrabinta ⇆ Bandung ⇆ Jakarta',
+      subtitle: 'Shuttle Reguler & Drop Off Alamat',
+      description: 'Menghubungkan Agrabinta Cianjur Selatan langsung ke Kota Bandung dan Jakarta dengan waktu perjalanan efisien.',
+      tag: 'Door to Door'
+    },
+    {
+      id: 'rute-4',
       icon: <Compass className="w-5 h-5 text-red-600" />,
-      badge: 'RUTE UTAMA',
-      title: 'Tenggarong – Sangatta (Kutai Timur)',
-      subtitle: 'Rute Utama Poros Kaltim',
-      description: 'Layanan antar-kota harian paling populer di daerah Tenggarong, Bontang, hingga Sangatta Kutai Timur.',
-      tag: 'Door to Door'
+      badge: 'FLEKSIBEL',
+      title: 'Custom Route (Rute Khusus & Carteran)',
+      subtitle: 'Carter Privat 1 Mobil Full Rombongan',
+      description: 'Sewa carter fleksibel bebas tentukan jam keberangkatan & rute tujuan sesuai kebutuhan Anda.',
+      tag: 'Carter Privat'
     },
     {
-      id: 'ikn-nusantara',
+      id: 'door-to-door',
       icon: <Landmark className="w-5 h-5 text-red-600" />,
-      badge: 'KUNJUNGAN KERJA',
-      title: 'Balikpapan / Samarinda – IKN Nusantara',
-      subtitle: 'Perjalanan Dinas & Proyek IKN',
-      description: 'Layanan sewa carter & travel khusus kunjungan kerja, dinas, dan peninjauan kawasan Ibu Kota Nusantara.',
-      tag: 'Door to Door'
+      badge: 'JEMPUT ALAMAT',
+      title: 'Layanan Antar-Jemput (Door-to-Door)',
+      subtitle: 'Langsung dari Rumah ke Tempat Tujuan',
+      description: 'Kemudahan penjemputan langsung di depan pintu rumah asal hingga diantar tepat di lokasi tujuan.',
+      tag: 'Bebas Repot'
     },
     {
-      id: 'armada-unggulan',
+      id: 'drop-off',
       icon: <Car className="w-5 h-5 text-red-600" />,
-      badge: 'ARMADA UNGGULAN',
-      title: 'Sewa Mobil Dhatia Travel (All-In / Carter)',
-      subtitle: 'Innova Reborn, Veloz & Avanza FWD',
-      description: 'Armada bersih, harum, AC dingin double blower, USB charger, siap ditemani pengemudi ramah & berpengalaman.',
-      tag: 'Door to Door'
+      badge: 'DROP OFF',
+      title: 'Drop Off Bandara, Stasiun & Pelabuhan',
+      subtitle: 'Penjemputan / Antar 24 Jam Non-Stop',
+      description: 'Layanan drop off cepat dan tepat waktu ke Bandara Soekarno-Hatta, Halim, Stasiun, atau Pelabuhanratu.',
+      tag: '24 Jam Standby'
     }
   ];
 
@@ -98,18 +80,18 @@ export default function Services({ lang }: ServicesProps) {
         {/* Section Heading Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-2" id="services-heading">
           <span className="font-display font-bold text-xs uppercase tracking-widest text-red-600 block">
-            RUTE & LAYANAN TERLENGKAP
+            RUTE UTAMA & LAYANAN PERJALANAN
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight leading-tight">
-            Pilihan Rute Travel <span className="text-red-600">Dhatia Travel</span>
+            Rute Perjalanan <span className="text-red-600">AGRA NGAHIJI TRANS</span>
           </h2>
           <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
-            Melayani perjalanan harian antar-kota, antar jemput Bandara Sepinggan, Pelabuhan Semayang, hingga kawasan IKN & Kutai Timur.
+            Melayani pengantaran & penjemputan Door-to-Door, Drop Off, Carter Privat, maupun Reguler rute Agrabinta, Pelabuhanratu, Puncak, Bandung, dan Jabodetabek.
           </p>
         </div>
 
-        {/* 4 COLUMNS x 2 ROWS CARDS GRID (EXACT MATCH TO SCREENSHOT) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* CARDS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {routesList.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -148,7 +130,7 @@ export default function Services({ lang }: ServicesProps) {
 
               </div>
 
-              {/* Card Footer: Door to Door tag + Red Pesan Rute Button */}
+              {/* Card Footer */}
               <div className="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
                 <div className="flex items-center gap-1 text-xs font-medium text-emerald-600">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />

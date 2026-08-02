@@ -54,8 +54,8 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
   };
 
   const handleWhatsAppHeader = () => {
-    const message = encodeURIComponent("Halo Dhatia Travel, saya ingin memesan tiket travel / sewa mobil rute Kalimantan Timur. Mohon info ketersediaan jam & harga. Terima kasih!");
-    window.open(`https://wa.me/6281264008000?text=${message}`, '_blank', 'noreferrer');
+    const message = encodeURIComponent("Halo AGRA NGAHIJI TRANS, saya ingin memesan tiket travel / sewa mobil rute Cianjur Selatan - Jabodetabek - Bandung. Mohon info ketersediaan jam & harga. Terima kasih!");
+    window.open(`https://wa.me/6285864335465?text=${message}`, '_blank', 'noreferrer');
   };
 
   return (
@@ -74,17 +74,28 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             
-            {/* 1. BRAND IMAGE LOGO */}
+            {/* 1. BRAND IMAGE LOGO & TEXT */}
             <div 
               onClick={() => handleItemClick({ label: t.nav_home, id: 'home', type: 'page', pageId: 'home' })}
-              className="flex items-center cursor-pointer group shrink-0 py-1"
+              className="flex items-center gap-3 cursor-pointer group shrink-0 py-1"
               id="header-logo"
             >
               <img 
-                src="/logo-dhatia.png" 
-                alt="DHATIA Tour Travel Logo" 
-                className="h-14 sm:h-16 lg:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-sm"
+                src="/logo.png" 
+                alt="AGRA NGAHIJI TRANS Logo" 
+                className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-sm"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
               />
+              <div className="flex flex-col">
+                <span className="font-display font-black text-lg sm:text-xl lg:text-2xl text-slate-900 tracking-tight leading-none group-hover:text-red-600 transition-colors">
+                  AGRA NGAHIJI <span className="text-red-600">TRANS</span>
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 tracking-wider uppercase mt-1">
+                  Jasa Angkutan Sewa Khusus & Travel
+                </span>
+              </div>
             </div>
 
             {/* 2. DESKTOP NAV ITEMS */}
@@ -165,7 +176,7 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
                   className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-bold text-sm py-3.5 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5 fill-current" />
-                  <span>Pesan via WhatsApp (081264008000)</span>
+                  <span>Pesan via WhatsApp (0858-6433-5465)</span>
                 </button>
               </div>
             </div>

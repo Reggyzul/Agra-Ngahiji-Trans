@@ -89,9 +89,9 @@ export default function App() {
   };
 
   const handleFastWhatsApp = () => {
-    const waNumber = '6281264008000';
+    const waNumber = '6285864335465';
     const text = encodeURIComponent(
-      'Halo Dhatia Travel, saya berminat pesan tiket travel / sewa mobil rute Kalimantan Timur. Mohon bantuan reservasi. Terima kasih!'
+      'Halo AGRA NGAHIJI TRANS, saya berminat pesan tiket travel / sewa mobil rute Cianjur Selatan - Jabodetabek - Bandung. Mohon bantuan reservasi. Terima kasih!'
     );
     window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank', 'noreferrer');
   };
@@ -161,7 +161,7 @@ export default function App() {
           animate={{ scale: 1 }}
           onClick={handleFastWhatsApp}
           className="w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-2xl flex items-center justify-center cursor-pointer hover:scale-110 transition-all border-2 border-white"
-          title="Chat WhatsApp Admin Dhatia Travel (081264008000)"
+          title="Chat WhatsApp CS AGRA NGAHIJI TRANS (0858-6433-5465)"
           id="floater-wa"
         >
           <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">

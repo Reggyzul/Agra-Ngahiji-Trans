@@ -11,16 +11,16 @@ interface HeroProps {
 
 export default function Hero({ onRentClick, onVisiMisiClick, lang }: HeroProps) {
   const [name, setName] = useState('');
-  const [origin, setOrigin] = useState('Balikpapan');
-  const [destination, setDestination] = useState('Samarinda');
+  const [origin, setOrigin] = useState('Agrabinta (Cianjur Selatan)');
+  const [destination, setDestination] = useState('Jakarta / Jabodetabek');
   const [passengers, setPassengers] = useState('1 Orang');
 
   const t = TRANSLATIONS[lang];
 
   const handleQuickSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const waNumber = '6281264008000';
-    const textTemplate = `Halo Dhatia Travel, saya ingin pesan tiket travel / sewa mobil:
+    const waNumber = '6285864335465';
+    const textTemplate = `Halo AGRA NGAHIJI TRANS, saya ingin pesan tiket travel / sewa mobil:
 
 📋 *INFO PEMESANAN:*
 • Nama: *${name || 'Calon Penumpang'}*
@@ -35,8 +35,8 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
   };
 
   const handleWhatsAppPesanBtn = () => {
-    const waNumber = '6281264008000';
-    const text = encodeURIComponent('Halo Dhatia Travel, saya berminat pesan tiket travel / sewa mobil rute Kalimantan Timur. Mohon info lengkap.');
+    const waNumber = '6285864335465';
+    const text = encodeURIComponent('Halo AGRA NGAHIJI TRANS, saya berminat pesan tiket travel / sewa mobil rute Cianjur Selatan - Jabodetabek - Bandung. Mohon info lengkap.');
     window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank', 'noreferrer');
   };
 
@@ -49,7 +49,7 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
     <section id="home" className="pt-28 sm:pt-36 pb-12 bg-white text-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Hero Card Container - Matches Screenshot Dark Card Frame */}
+        {/* Main Hero Card Container */}
         <div className="relative rounded-[32px] overflow-hidden bg-slate-950 shadow-2xl p-6 sm:p-10 lg:p-12 border border-slate-800 text-white">
           
           {/* Background Fleet Showcase Image Overlay */}
@@ -57,15 +57,20 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
             className="absolute inset-0 bg-cover bg-center opacity-30 scale-105 pointer-events-none transition-transform duration-700"
             style={{ backgroundImage: `url('/team_red.avif')` }}
           />
-          {/* Dark Overlay Gradient for text readability */}
+          {/* Dark Overlay Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/60 pointer-events-none" />
 
           {/* Core Content Grid */}
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* LEFT COLUMN: HEADLINE & SUBTITLE & 2 BUTTONS (MATCHING SCREENSHOT) */}
+            {/* LEFT COLUMN: HEADLINE & SUBTITLE & CTA BUTTONS */}
             <div className="lg:col-span-7 space-y-6 text-left" id="hero-text-container">
               
+              {/* Tag Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/30 border border-red-500/40 text-red-400 text-xs font-bold uppercase tracking-wider">
+                <span>AGRA NGAHIJI TRANS</span>
+              </div>
+
               {/* Bold Large Headline */}
               <motion.h1 
                 initial={{ opacity: 0, y: 15 }}
@@ -73,8 +78,8 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
                 transition={{ duration: 0.5 }}
                 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight"
               >
-                Travel bersama <br />
-                <span className="text-white">Romansa Dhatia Travel</span>
+                Solusi Perjalanan Aman, <br />
+                <span className="text-[#20ba59]">Nyaman & Terpercaya</span>
               </motion.h1>
 
               {/* Sub-headline Paragraph */}
@@ -84,10 +89,10 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="font-sans text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl font-normal opacity-90"
               >
-                Travel bersama Dhatia Travel, kami menawarkan Travel di daerah Kalimantan Timur, terutama pada rute travel Balikpapan Samarinda Tenggarong Kota Bangun Sangatta.
+                Melayani Jasa Angkutan Sewa Khusus, Travel Antar-Kota, & Door-to-Door Service rute Agrabinta (Cianjur Selatan), Pelabuhanratu, Puncak, Bandung, Jakarta (Jabodetabek), dan sekitarnya.
               </motion.p>
 
-              {/* Two CTA Buttons: [💬 Pesan] & [Rute] (EXACT MATCH TO SCREENSHOT) */}
+              {/* Two CTA Buttons */}
               <motion.div 
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -100,21 +105,21 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
                   className="bg-red-600 hover:bg-red-700 text-white font-sans font-bold text-sm px-6 py-3 rounded-full shadow-lg shadow-red-600/30 transition-all duration-200 cursor-pointer flex items-center gap-2 border border-red-500/20 active:scale-95"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-                  <span>Pesan</span>
+                  <span>Pesan Sekarang</span>
                 </button>
 
-                {/* White/Light Gray Rute Button */}
+                {/* Light Button */}
                 <button
                   onClick={handleScrollToRoutes}
                   className="bg-slate-100 hover:bg-white text-slate-800 font-sans font-bold text-sm px-7 py-3 rounded-full transition-all duration-200 cursor-pointer shadow-sm hover:shadow active:scale-95 border border-slate-200"
                 >
-                  <span>Rute</span>
+                  <span>Rute & Layanan</span>
                 </button>
               </motion.div>
 
             </div>
 
-            {/* RIGHT COLUMN: FLOATING WHITE BOOKING CARD (MATCHING SCREENSHOT) */}
+            {/* RIGHT COLUMN: FLOATING WHITE BOOKING CARD */}
             <div className="lg:col-span-5">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -124,9 +129,9 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
               >
                 {/* Card Title Bar */}
                 <div className="flex items-center gap-2.5 pb-4 mb-5 border-b border-slate-100">
-                  <Ticket className="w-5 h-5 text-slate-700 shrink-0" />
+                  <Ticket className="w-5 h-5 text-red-600 shrink-0" />
                   <h3 className="font-display font-bold text-base text-slate-800 tracking-tight">
-                    Info Pemesanan
+                    Cek Reservasi Cepat
                   </h3>
                 </div>
 
@@ -136,50 +141,50 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
                   {/* Nama Anda Input */}
                   <div className="space-y-1.5">
                     <label className="block font-semibold text-slate-600 text-xs">
-                      Nama anda
+                      Nama Anda
                     </label>
                     <input
                       type="text"
-                      placeholder="Nama anda"
+                      placeholder="Masukkan nama anda"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:bg-white focus:outline-none text-slate-800 font-medium transition-all text-xs"
                     />
                   </div>
 
-                  {/* Asal & Tujuan Inputs Side-by-Side */}
+                  {/* Asal & Tujuan Inputs */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="space-y-1.5">
                       <label className="block font-semibold text-slate-600 text-xs">
-                        Asal
+                        Asal Penjemputan
                       </label>
                       <select
                         value={origin}
                         onChange={(e) => setOrigin(e.target.value)}
                         className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:bg-white focus:outline-none text-slate-800 font-semibold cursor-pointer transition-all text-xs"
                       >
-                        <option value="Balikpapan">Balikpapan</option>
-                        <option value="Samarinda">Samarinda</option>
-                        <option value="Tenggarong">Tenggarong</option>
-                        <option value="Kota Bangun">Kota Bangun</option>
-                        <option value="Sangatta">Sangatta</option>
+                        <option value="Agrabinta (Cianjur Selatan)">Agrabinta (Cianjur Selatan)</option>
+                        <option value="Pelabuhanratu">Pelabuhanratu</option>
+                        <option value="Jalur Puncak">Jalur Puncak</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Jakarta / Jabodetabek">Jakarta / Jabodetabek</option>
                       </select>
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="block font-semibold text-slate-600 text-xs">
-                        Tujuan
+                        Tujuan Pengantaran
                       </label>
                       <select
                         value={destination}
                         onChange={(e) => setDestination(e.target.value)}
                         className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:bg-white focus:outline-none text-slate-800 font-semibold cursor-pointer transition-all text-xs"
                       >
-                        <option value="Samarinda">Samarinda</option>
-                        <option value="Balikpapan">Balikpapan</option>
-                        <option value="Tenggarong">Tenggarong</option>
-                        <option value="Kota Bangun">Kota Bangun</option>
-                        <option value="Sangatta">Sangatta</option>
+                        <option value="Jakarta / Jabodetabek">Jakarta / Jabodetabek</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Pelabuhanratu">Pelabuhanratu</option>
+                        <option value="Jalur Puncak">Jalur Puncak</option>
+                        <option value="Agrabinta (Cianjur Selatan)">Agrabinta (Cianjur Selatan)</option>
                       </select>
                     </div>
                   </div>
@@ -187,28 +192,27 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
                   {/* Jumlah Penumpang Select */}
                   <div className="space-y-1.5">
                     <label className="block font-semibold text-slate-600 text-xs">
-                      Jumlah Penumpang
+                      Jumlah Penumpang / Carter
                     </label>
                     <select
                       value={passengers}
                       onChange={(e) => setPassengers(e.target.value)}
                       className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:bg-white focus:outline-none text-slate-800 font-semibold cursor-pointer transition-all text-xs"
                     >
-                      <option value="1 Orang">1 Orang</option>
-                      <option value="2 Orang">2 Orang</option>
-                      <option value="3 Orang">3 Orang</option>
-                      <option value="4 Orang">4 Orang</option>
-                      <option value="5+ Orang / Carter Mobil">5+ Orang / Carter Privat Mobil</option>
+                      <option value="1 Orang">1 Orang (Reguler)</option>
+                      <option value="2 Orang">2 Orang (Reguler)</option>
+                      <option value="3 Orang">3 Orang (Reguler)</option>
+                      <option value="4+ Orang / Carter Privat Mobil">4+ Orang / Carter Privat Mobil</option>
                     </select>
                   </div>
 
-                  {/* Full-width Red Button matching screenshot */}
+                  {/* Full-width Red Button */}
                   <div className="pt-2">
                     <button
                       type="submit"
                       className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-bold text-sm py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer border border-red-500/20 active:scale-98"
                     >
-                      Pesan Sekarang
+                      Pesan Sekarang via WA
                     </button>
                   </div>
 
@@ -231,7 +235,7 @@ Mohon informasi jadwal keberangkatan & ketersediaan tempat. Terima kasih!`;
             id="hero-floating-profil-btn"
           >
             <span className="font-sans font-bold text-xs sm:text-sm text-slate-700 group-hover:text-red-600 transition-colors bg-white/95 px-5 py-1.5 rounded-full border border-slate-200 shadow-sm group-hover:shadow-md group-hover:border-red-200">
-              Profil Selengkapnya
+              Profil & Visi Misi
             </span>
             <div className="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center shadow-md group-hover:bg-red-700 group-hover:scale-110 transition-all animate-bounce">
               <ChevronDown className="w-5 h-5" />

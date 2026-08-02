@@ -23,17 +23,17 @@ export default function Testimonials({ lang }: TestimonialsProps) {
         
         {/* Section Heading Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3" id="testimonials-heading">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-display font-extrabold text-xs tracking-wider uppercase shadow-sm">
-            <MessageSquare className="w-4 h-4 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 font-display font-extrabold text-xs tracking-wider uppercase shadow-sm">
+            <MessageSquare className="w-4 h-4 text-red-600" />
             <span>ULASAN & TESTIMONI PENUMPANG</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight">
-            Pengalaman <span className="text-amber-600">Penumpang Dhatia Travel</span>
+            Pengalaman <span className="text-red-600">Penumpang AGRA NGAHIJI TRANS</span>
           </h2>
 
           <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
-            Kepercayaan dan kepuasan Anda adalah kebanggaan utama kami dalam setiap rute perjalanan di Kalimantan Timur.
+            Keselamatan, ketepatan waktu, dan kenyamanan Anda di Cianjur Selatan, Bandung, & Jabodetabek adalah prioritas utama kami.
           </p>
         </div>
 

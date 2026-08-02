@@ -21,48 +21,51 @@ interface AdvantagesProps {
 export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps) {
   const t = TRANSLATIONS[lang];
 
+export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps) {
+  const t = TRANSLATIONS[lang];
+
   const advantagesList = [
     {
-      id: 'keamanan-utama',
-      icon: <ShieldCheck className="w-7 h-7 text-amber-500" />,
+      id: 'keselamatan-nomor-satu',
+      icon: <ShieldCheck className="w-7 h-7 text-red-600" />,
       badge: 'Prioritas Utama',
-      badgeBg: 'bg-amber-50 text-amber-700 border-amber-200',
-      title: 'Keamanan & Keselamatan Utama',
-      description: 'Seluruh armada kendaraan (Toyota Innova Reborn, Veloz FWD, Avanza FWD) rutin diservis berkala, dicek kelayakannya sebelum jalan, serta dibersihkan hingga steril demi keamanan penuh penumpang.',
-      highlights: ['Armada Selalu Terawat & Steril', 'Pengecekan Rutin Berkala', 'Perjalanan Nyaman & Tenang']
-    },
-    {
-      id: 'tepat-waktu',
-      icon: <Clock className="w-7 h-7 text-teal-600" />,
-      badge: 'Disiplin & Terjamin',
-      badgeBg: 'bg-teal-50 text-teal-700 border-teal-200',
-      title: 'Tepat Waktu & Terpercaya',
-      description: 'Jadwal keberangkatan yang pasti dan terjamin. Pengemudi berpengalaman yang menguasai rute Kalimantan Timur dengan aman, memastikan Anda tiba tepat waktu sesuai jadwal.',
-      highlights: ['Jadwal Keberangkatan Terjamin', 'Pengemudi Berpengalaman', 'Efisien & Tepat Waktu']
+      badgeBg: 'bg-red-50 text-red-700 border-red-200',
+      title: 'Keselamatan Nomor Satu',
+      description: 'Menyediakan armada (Avanza, Luxio, Calya, Sigra) yang selalu terawat, laik jalan, bersih, wangi, ber-AC dingin, dan ditangani oleh pengemudi handal berpengalaman.',
+      highlights: ['Armada Terawat & Laik Jalan', 'Bersih, Wangi & AC Cold', 'Pengemudi Handal Berpengalaman']
     },
     {
       id: 'door-to-door',
       icon: <MapPin className="w-7 h-7 text-amber-600" />,
-      badge: 'Praktis & Bebas Repot',
+      badge: 'Bebas Repot',
       badgeBg: 'bg-amber-50 text-amber-800 border-amber-200',
-      title: 'Layanan Door-to-Door / Airport & Port',
-      description: 'Layanan jemput antar langsung ke alamat rumah Anda, Bandara SAMS Sepinggan Balikpapan, maupun Pelabuhan Semayang Balikpapan tanpa perlu repot berganti kendaraan.',
-      highlights: ['Jemput Langsung di Alamat', 'Antar Jemput Bandara Sepinggan', 'Penjemputan Pelabuhan Semayang']
+      title: 'Layanan Antar-Jemput (Door-to-Door)',
+      description: 'Memberikan kemudahan penjemputan langsung dari lokasi asal hingga diantar tepat ke lokasi tujuan tanpa perlu ganti armada.',
+      highlights: ['Jemput Langsung di Alamat Asal', 'Pengantaran Sampai Lokasi Tujuan', 'Layanan Reguler & Carter Drop']
     },
     {
-      id: 'harga-transparan',
+      id: 'tepat-waktu',
+      icon: <Clock className="w-7 h-7 text-teal-600" />,
+      badge: 'Jadwal Terjamin',
+      badgeBg: 'bg-teal-50 text-teal-700 border-teal-200',
+      title: 'Tepat Waktu & Fleksibel',
+      description: 'Menjaga komitmen jadwal keberangkatan untuk kenyamanan para penglaju dan wisatawan di rute Cianjur Selatan – Jabodetabek – Bandung.',
+      highlights: ['Komitmen Jam Keberangkatan', 'Fleksibel Rute Custom', 'Pengemudi Santun & Tangkas']
+    },
+    {
+      id: 'tarif-transparan',
       icon: <Banknote className="w-7 h-7 text-emerald-600" />,
-      badge: 'Hemat & Jujur',
+      badge: 'Harga Jujur',
       badgeBg: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-      title: 'Harga Transparan (Mulai Rp 150.000-an)',
-      description: 'Tarif perjalanan yang sangat transparan dan hemat mulai dari Rp 150.000-an per orang sesuai rute. Tanpa biaya tersembunyi atau siluman.',
-      highlights: ['Tarif Mulai dari Rp 150.000-an', 'Tanpa Biaya Tersembunyi', 'Opsi Travel Reguler & Carter']
+      title: 'Tarif Terjangkau & Transparan',
+      description: 'Menawarkan harga sewa/tiket yang kompetitif dan jujur mulai dari Rp 150.000 tanpa biaya tersembunyi atau tambahan tidak jelas.',
+      highlights: ['Mulai dari Rp 150.000', 'Tanpa Biaya Tersembunyi', 'Respon CS 24 Jam']
     }
   ];
 
   const handleWhatsAppConsultation = (title: string) => {
-    const waNumber = '6281264008000';
-    const message = `Halo Dhatia Travel, saya ingin bertanya info selengkapnya mengenai keunggulan layanan: ${title}. Terima kasih!`;
+    const waNumber = '6285864335465';
+    const message = `Halo AGRA NGAHIJI TRANS, saya ingin bertanya info selengkapnya mengenai layanan: ${title}. Terima kasih!`;
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
@@ -76,17 +79,17 @@ export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3" id="advantages-heading">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-display font-extrabold text-xs uppercase tracking-wider shadow-sm">
-            <Sparkles className="w-4 h-4 text-amber-600" />
-            <span>MENGAPA MEMILIH DHATIA TRAVEL</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 font-display font-extrabold text-xs uppercase tracking-wider shadow-sm">
+            <Sparkles className="w-4 h-4 text-red-600" />
+            <span>MENGAPA MEMILIH AGRA NGAHIJI TRANS</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight">
-            Keunggulan Layanan <span className="text-amber-600">Dhatia Travel</span>
+            Keunggulan Layanan <span className="text-red-600">AGRA NGAHIJI TRANS</span>
           </h2>
 
           <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
-            Komitmen terbaik kami untuk memberikan pengalaman perjalanan travel & sewa mobil paling aman, nyaman, dan terpercaya di Kalimantan Timur.
+            Komitmen terbaik kami untuk memberikan pengalaman perjalanan yang aman, nyaman, dan terpercaya di rute Cianjur Selatan – Jabodetabek – Bandung.
           </p>
         </div>
 
@@ -99,10 +102,10 @@ export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               key={item.id}
-              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-md hover:shadow-2xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-md hover:shadow-2xl hover:border-red-400 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
             >
               {/* Card Top Glow Accent */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-600 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="space-y-4 text-left">
                 {/* Badge & Icon Row */}
@@ -117,7 +120,7 @@ export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="font-display font-black text-lg text-[#0f172a] group-hover:text-amber-600 transition-colors leading-snug">
+                  <h3 className="font-display font-black text-lg text-[#0f172a] group-hover:text-red-600 transition-colors leading-snug">
                     {item.title}
                   </h3>
                   <p className="font-sans text-xs text-slate-600 leading-relaxed mt-2 font-medium">
@@ -138,10 +141,10 @@ export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps
 
               {/* Bottom Quick Action */}
               <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Standard Kaltim</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">CS 24 Jam</span>
                 <button
                   onClick={() => handleWhatsAppConsultation(item.title)}
-                  className="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1 transition-colors cursor-pointer"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1 transition-colors cursor-pointer"
                 >
                   <span>Tanya CS</span>
                   <MessageCircle className="w-3.5 h-3.5 fill-current" />
@@ -158,31 +161,31 @@ export default function Advantages({ onBookClick, lang = 'ID' }: AdvantagesProps
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-14 bg-gradient-to-r from-[#0b192c] via-[#0f172a] to-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden text-left"
+          className="mt-14 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden text-left border border-slate-800"
           id="advantages-guarantee-banner"
         >
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">
-                <HeartHandshake className="w-4 h-4 text-amber-400" />
-                <span>KOMITMEN KUALITAS DHATIA TRAVEL</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/30 text-red-400 text-xs font-bold uppercase tracking-wider">
+                <HeartHandshake className="w-4 h-4 text-red-400" />
+                <span>KOMITMEN AGRA NGAHIJI TRANS</span>
               </div>
               <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-tight uppercase">
-                Siap Melayani Perjalanan Anda di Kalimantan Timur
+                Siap Melayani Perjalanan Anda 24 Jam
               </h3>
               <p className="font-sans text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-                Pesan tiket perjalanan atau sewa carter mobil untuk keperluan bisnis, keluarga, penglaju, maupun akses Bandara & Pelabuhan secara praktis via WhatsApp.
+                Pesan tiket perjalanan atau sewa carter privat via WhatsApp Fast Response (0858-6433-5465 / 0857-9871-2377).
               </p>
             </div>
 
             <a
-              href="https://wa.me/6281264008000?text=Halo%20Dhatia%20Travel,%20saya%20ingin%20pesan%20tiket%20travel%20/%20sewa%20mobil"
+              href="https://wa.me/6285864335465?text=Halo%20AGRA%20NGAHIJI%20TRANS,%20saya%20ingin%20pesan%20tiket%20travel%20/%20sewa%20mobil"
               target="_blank"
               rel="noreferrer"
-              className="bg-gradient-to-r from-amber-500 to-teal-600 hover:from-amber-600 hover:to-teal-700 text-white font-sans font-extrabold text-xs uppercase px-7 py-3.5 rounded-2xl shadow-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer"
+              className="bg-red-600 hover:bg-red-700 text-white font-sans font-extrabold text-xs uppercase px-7 py-3.5 rounded-2xl shadow-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer"
             >
               <MessageCircle className="w-4.5 h-4.5 fill-current" />
-              <span>Hubungi WA (081264008000)</span>
+              <span>Hubungi WA (0858-6433-5465)</span>
             </a>
           </div>
         </motion.div>
