@@ -36,7 +36,7 @@ export const CARS: Car[] = [
     category: 'Kabin Luas & Lega',
     pricePerDay: 600000,
     priceDisplay: 'Mulai dari Rp 150.000 / org | Carter Rombongan',
-    image: '/apv.avif',
+    image: '/luxio.png',
     seats: 8,
     transmission: 'Manual/Matic',
     fuel: 'Bensin (Bertenaga)',
