@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#dc2626"/>
-      <stop offset="100%" stop-color="#991b1b"/>
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="32" fill="url(#bg)"/>
-  <text x="64" y="90" font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" text-anchor="middle" fill="#ffffff">A</text>
-  <circle cx="98" cy="30" r="10" fill="#f59e0b"/>
+  <rect width="128" height="128" rx="28" fill="#0f2942"/>
+  <!-- Stylized A in Navy & Gold -->
+  <path d="M40 98 L64 26 L88 98" stroke="#0f2942" stroke-width="12" fill="none"/>
+  <path d="M40 98 L64 26 L88 98" stroke="#f59e0b" stroke-width="10" fill="none" stroke-linejoin="round"/>
+  <!-- Curved Road Arrow -->
+  <path d="M30 84 Q 60 55 102 36" stroke="#0f2942" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M30 84 Q 60 55 102 36" stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M88 30 L 104 35 L 98 50 Z" fill="#fbbf24"/>
 </svg>
